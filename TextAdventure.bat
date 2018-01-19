@@ -5,9 +5,6 @@ echo Welcome to Ryan's Text Adventure!
 pause
 goto MapMenu
 rem menus
-:Data
-set requiredGems-C11=1
-set requiredGems-C12=1
 
 :MapMenu
 cls
@@ -151,6 +148,7 @@ rem Begin level code - Cave
 
 :C11x0y0
 cls
+set req-items=1
 title Level C11x0y0
 echo -Info-
 echo Coordantes: x0, y0
@@ -202,10 +200,10 @@ echo No Treasure
 echo -Keys-
 echo s - move backwards
 echo d - move right
-if %map% == 1 echo -Map-
-if %map% == 1 echo X  O  O
-if %map% == 1 echo O  O  O
-if %map% == 1 echo O  O  O
+echo -Map-
+echo X  O  O
+echo O  O  O
+echo O  O  O
 set /p direction=
 
 if %direction% == w goto C11x-1y1
@@ -223,6 +221,10 @@ echo -Keys-
 echo a - move left
 echo s - move backwards
 echo d - move right
+echo -Map-
+echo O  X  O
+echo O  O  O
+echo O  O  O
 set /p direction=
 
 
@@ -240,6 +242,10 @@ echo No Tresaure
 echo -Keys-
 echo a - move left
 echo s - move backwards
+echo -Map-
+echo O  O  X
+echo O  O  O
+echo O  O  O
 set /p direction=
 
 if %direction% == a goto C11x0y1
@@ -317,6 +323,7 @@ rem Cave Easy Level 2
 
 :C12x0y0
 cls
+set req-items=1
 title Level C12x0y0
 echo -Info-
 echo Coordantes: x0, y0
