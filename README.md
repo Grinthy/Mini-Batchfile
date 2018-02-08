@@ -1,2 +1,2 @@
-# Ryan-Text-Adventure
-Just a repo to host my text adventure.
+# Mini-Batch
+No need to explain, lookie at the description. 
