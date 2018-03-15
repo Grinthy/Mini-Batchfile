@@ -28,3 +28,5 @@ goto Menu
 cls
 echo --- CREDITS ---
 echo Lead Dev / Ryan / @Grinthy
+pause
+goto Menu
