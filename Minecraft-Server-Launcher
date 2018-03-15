@@ -1,6 +1,30 @@
 @echo off
-echo Batch File Minecraft Server Launcher 
-echo Version 1.0 
-echo Please enter a command.
-echo ----
-echo nogui -
+:Menu
+cls
+echo = This program requires Java
+echo > Batch File Minecraft Server Launcher 
+echo > Version 1.0 
+echo > Please enter a command
+echo 
+echo + nogui - Launch the server software with command prompt output.
+echo + gui - Launchthe server software with GUI.
+echo + credits - Show dev credits.
+
+set /p %choice%
+
+if %choice% = nogui goto choice-nogui
+if %choice% = gui goto choice-gui
+if %choice% = credits goto choice-credits
+
+:choice-nogui
+java -Xmx1024M -Xms1024M -jar minecraft_server.1.12.2.jar nogui
+goto Menu
+
+:choice-gui 
+java -Xmx1024M -Xms1024M -jar minecraft_server.1.12.2.jar gui
+goto Menu
+
+:choice-credits
+cls
+echo --- CREDITS ---
+echo Lead Dev / Ryan / @Grinthy
